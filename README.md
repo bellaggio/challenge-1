@@ -52,16 +52,15 @@ class ElectronicItems
         if (in_array($type, ElectronicItem::$types))
         {
             $callback = function($item) use ($type)
-        {
-        return $item->type == $type;
-        };
+            {
+                return $item->type == $type;
+            }
             $items = array_filter($this->items, $callback);
         }
         return false;
     }
 }
 
-[Type text][Type text][Type text]
 
 class ElectronicItem
 {
@@ -107,7 +106,7 @@ class ElectronicItem
 ```
 
 
-The endpoints: 
+## The endpoints: 
 
 Obs - "desc" or "asc" are acceptable to condition. Default = "asc".
 ```bash
@@ -123,5 +122,3 @@ All parameters in small case.
 ```bash
  ./vendor/bin/phpunit
 ```
-
-
